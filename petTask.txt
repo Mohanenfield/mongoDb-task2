@@ -1,0 +1,91 @@
+petInformation:
+
+    use petShop;
+    db.petInfo.insertMany([{
+        "petType" : "dog",
+        "breed" : "German Shepard",
+        "age" : "33 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 25000,
+        
+    },{
+        "petType" : "cat",
+        "breed" : "ragdoll",
+        "age" : "40 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 35000
+    },
+    {
+        "petType" : "fish",
+        "breed" : "goldenFish",
+        "age" : "10 days",
+        "certificate":true,
+        "vaccinated" :false,
+        "price": 1500
+    }
+    ,
+    {
+        "petType" : "fish",
+        "breed" : "Fighter",
+        "age" : "15 days",
+        "certificate":true,
+        "vaccinated" :false,
+        "price": 3500
+    },
+    {
+        "petType" : "dog",
+        "breed" : "Rottweiler",
+        "age" : "35 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 18000
+    }
+    ,
+    {
+        "petType" : "iguana",
+        "breed" : "reptile",
+        "age" : "60 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 50000
+    }
+    ,
+    {
+        "petType" : "rabbit",
+        "breed" : "himalayan",
+        "age" : "20 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 4500
+    }
+    ,
+    {
+        "petType" : "snake",
+        "breed" : "python",
+        "age" : "20 days",
+        "certificate":true,
+        "vaccinated" :true,
+        "price": 75000
+    }
+    ,
+    {
+        "petType" : "pigeon",
+        "breed" : "roller",
+        "age" : "20 days",
+        "certificate":true,
+        "vaccinated" :false,
+        "price": 2500},
+    {
+        "petType" : "dog",
+        "breed" : "Puppy",
+        "age" : "30 days",
+        "certificate":true,
+        "vaccinated" :false,
+        "price": 4500},
+        
+        ])
+
+customerInformation:
+
