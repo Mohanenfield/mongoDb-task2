@@ -89,3 +89,73 @@ petInformation:
 
 customerInformation:
 
+    use petShop;
+    db.customerInfo.insertMany([{
+        "customerName" : "Babu",
+        "petType" : "dog",
+        "breedAskedFor" : "Rottweiler",
+        "contact" : 9988776655,
+        "area":"Avadi",
+        "paymentType" :"Cash"
+        
+        
+    },{
+        "customerName" : "Rohit",
+        "petType" : "cat",
+        "breedAskedFor" : "ragdoll",
+        "contact" : 5566778899,
+        "area":"Koyambedu",
+        "paymentType" :"Card"
+        
+        
+    },{
+        "customerName" : "Gopal",
+        "petType" : "iguana",
+        "breedAskedFor" : "reptile",
+        "contact" : 7788995566,
+        "area":"Mudichur",
+        "paymentType" :"Gpay"
+        
+        
+    },{
+        "customerName" : "John",
+        "petType" : "pigeon",
+        "breedAskedFor" : "roller",
+        "contact" : 9944332255,
+        "area":"Virugambakkam",
+        "paymentType" :"Cash"
+        
+        
+    },{
+        "customerName" : "Uvnesh",
+        "petType" : "dog",
+        "breedAskedFor" : "Labrador",
+        "contact" : 9988552255,
+        "area":"Nerkundram",
+        "paymentType" :"Gpay"
+        
+        
+    },{
+        "customerName" : "Javeed",
+        "petType" : "snake",
+        "breedAskedFor" : "python",
+        "contact" : 9933554455,
+        "area":"Mangaadu",
+        "paymentType" :"Cash"
+        
+        
+    },
+        
+        ])
+
+ For relating two tables:
+
+    use petShop;
+    db.customerInfo.aggregate([{
+        $lookup:{
+            from:"petInfo",
+            localField:"breedAskedFor",
+            foreignField:"breed",
+            as:"BreedAvailable"
+        }
+    }]) 
